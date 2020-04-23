@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>COVID-19</title>
+    <title>survey</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -242,31 +242,146 @@
                             <p class="card-description"> We need your help in providing the most accurate and truthful
                                 medical statement in order for us to treat and prevent spreading of the disease
                                 effectively </p>
-                            <form class="forms-sample" name="from_regist" onSubmit="JavaScript:return fncSubmit();"></form>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <input type="text" name="fname" id="fname" class="form-control" placeholder="First name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="Last name">
+                            <form class="forms-sample" name="from_regist" onSubmit="JavaScript:return fncSubmit();">
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <input type="text" name="fname" id="fname" class="form-control"
+                                            placeholder="First name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="lname" id="lname" class="form-control"
+                                            placeholder="Last name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="pnumber" id="pnumber" class="form-control"
+                                            placeholder="Phone number">
+                                    </div>
                                 </div>
 
-                            </div>
-                            <div class="row form-group">
-                                <div class="col">
-                                    <input type="text" name="pnumber" id="pnumber" class="form-control" placeholder="Phone number">
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <div class="radio mr-3 card-description">
+                                            <label><input type="radio" name="optradio0" id="shareholder" />
+                                                ผู้ถือหุ้นหรือผู้มอบฉันทะ/shareholder or proxy</label>
+                                        </div>
+                                        <div class="radio card-description">
+                                            <label><input type="radio" name="optradio0" id="escort" />
+                                                ผู้ติดตาม/Escort</label>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="career" id="career" class="form-control" placeholder="Career">
+
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <div>
+                                            <p class="card-description">(Do you currently have any of the following
+                                                symptoms?
+                                                Tick all that apply:)</p>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col">
+                                                <p>1. ไอ / เจ็บคอ (Cough Sore Throat)</p>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />No
+                                            </div>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col">
+                                                <p>2. มีน้ำมูก (Runny Nose)</p>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />No
+                                            </div>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col">
+                                                <p>3. หายใจเหนื่อย หรือ หายใจลำบาก (Shortness of Breath/Diffculty
+                                                    breathing)</p>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />No
+                                            </div>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col">
+                                                <p>4.
+                                                    คุณมีอาการใดๆที่มีอยู่ซึ่งจะทำให้ระบบภูมิคุ้มกันของคุณอ่อนแอลง
+                                                    (Do you have any existing condition which weakens your immune
+                                                    system ?)</p>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="optradio1" />No
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row form-group">
-                                  <div class="col">
-                                    <p class="card-description">Checkbox and radio controls (default appearance is in primary color)</p>
-                                  </div>
-                            </div>
-                            <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-                            <button class="btn btn-light">Cancel</button>
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <div>
+                                            <p class="card-description">(During last 14 days,have you travelled from or
+                                                transited in any country* below? Please specify:)</p>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col">
+                                                <label class="checkbox-inline mr-3"><input type="checkbox"
+                                                        value="" />China (จีน)</label>
+                                                <label class="checkbox-inline mr-3"><input type="checkbox"
+                                                        value="" />Macao (มาเก๊า)</label>
+                                                <label class="checkbox-inline mr-3"><input type="checkbox"
+                                                        value="" />Hong Kong (ฮ่องกง)</label>
+                                                <label class="checkbox-inline mr-3"><input type="checkbox"
+                                                        value="" />Phuket (ภูเก็ต)</label>
+                                                <label class="checkbox-inline mr-3"><input type="checkbox"
+                                                        value="" />America (อเมริกา)</label>
+                                            </div>
+                                            <div>
+                                                <div class="radio">
+                                                    <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="optradio1" />No
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <div>
+                                            <p class="card-description">(During last 14 days,have you close contact those who came from the area affected by the 
+                                                outbreaks of COVID-19 or history of close contact with a confirmed case of COVID-19 infection?:)</p>
+                                        </div>
+                                        <div class="card-description row">
+                                            <div class="col radio">
+                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                            </div>
+                                            <div class="col radio">
+                                                <input type="radio" name="optradio1" />No
+                                            </div>
+                                        </div> 
+                                        <div>
+                                            <p class="card-description">(Note: List of the affected countries is subject to change following the updated notification abd/or guidelines issued by the Miniisty of Public Health
+                                                and/or other govemment agencies)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                                <button class="btn btn-light">Cancel</button>
                             </form>
                         </div>
                     </div>
