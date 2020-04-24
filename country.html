@@ -237,7 +237,8 @@
                         <h3 class="page-title">
                             <span class="page-title-icon bg-gradient-primary text-white mr-2">
                                 <i class="mdi mdi-home"></i>
-                            </span> Dashboard </h3>
+                            </span> Dashboard </h3>   
+                            <h3 class="page-title" id="countryheader"></h3>  
                         <nav aria-label="breadcrumb">
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item active" aria-current="page">
@@ -246,6 +247,7 @@
                                 </li>
                             </ul>
                         </nav>
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-4 stretch-card grid-margin">
@@ -256,8 +258,7 @@
                                     <h4 class="font-weight-normal mb-3">Confirmed <i
                                             class="mdi mdi-chart-line mdi-24px float-right"></i>
                                     </h4>
-                                    <h2 class="mb-5">$ 15,0000</h2>
-                                    <h6 class="card-text">Increased by 60%</h6>
+                                    <h2 class="mb-5" id="confirmed"></h2>
                                 </div>
                             </div>
                         </div>
@@ -269,8 +270,7 @@
                                     <h4 class="font-weight-normal mb-3">Deaths <i
                                             class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                                     </h4>
-                                    <h2 class="mb-5">45,6334</h2>
-                                    <h6 class="card-text">Decreased by 10%</h6>
+                                    <h2 class="mb-5" id="deaths"></h2>
                                 </div>
                             </div>
                         </div>
@@ -282,42 +282,38 @@
                                     <h4 class="font-weight-normal mb-3">Recovered <i
                                             class="mdi mdi-diamond mdi-24px float-right"></i>
                                     </h4>
-                                    <h2 class="mb-5">95,5741</h2>
-                                    <h6 class="card-text">Increased by 5%</h6>
+                                    <h2 class="mb-5" id="recovered"></h2>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
-                        <div class="col-md-7 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="clearfix">
-                                        <h4 class="card-title float-left">Confirmed Deaths And Recovered Statistics</h4>
-                                        <div id="visit-sale-chart-legend"
-                                            class="rounded-legend legend-horizontal legend-top-right float-right"></div>
-                                    </div>
-                                     <!-- กราฟแท่ง -->
-                                    <canvas id="visit-sale-chart" class="mt-4"></canvas>
+                        <div class="col-lg-6 col-md-6 col-sm-12 pr-0 mb-3">
+                            <div class="card-collapsible card">
+                                <div class="card-header">
+                                    Total chart of Covid-19<i class="fa fa-caret-down caret"></i>
+                                  </div>
+                                <div class="card-body d-flex justify-content-around">
+                                    <canvas class="chart w-100" id="pieChart"></canvas>
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="col-md-5 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Traffic Sources</h4>
-                                     <!-- กราฟวงกลม -->
-                                    <canvas id="traffic-chart"></canvas>
-                                    <div id="traffic-chart-legend"
-                                        class="rounded-legend legend-vertical legend-bottom-left pt-4">
-                                    </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 pr-0 mb-3">
+                            <div class="card-collapsible card">
+                                <div class="card-header">
+                                    8day chart of Covid-19<i class="fa fa-caret-down caret"></i>
+                                </div>
+                                <div class="card-body d-flex justify-content-around">
+                                    <canvas class="chart w-100" id="barChart"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
-                    <h1 id="country"></h1>
+                    <h1 id="countryend"></h1>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -335,37 +331,37 @@
             </div>
         </div>
     </div>
-            <footer class="footer">
-                <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a
-                            href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights
-                        reserved.</span>
-                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
-                            class="mdi mdi-heart text-danger"></i></span>
-                </div>
-            </footer>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-            <script src="country.js"></script>
-            <script src="assets/vendors/js/vendor.bundle.base.js"></script>
-            <!-- endinject -->
-            <!-- Plugin js for this page -->
-            <script src="assets/vendors/chart.js/Chart.min.js"></script>
-            <!-- End plugin js for this page -->
-            <!-- inject:js -->
-            <script src="assets/js/off-canvas.js"></script>
-            <script src="assets/js/hoverable-collapse.js"></script>
-            <script src="assets/js/misc.js"></script>
-            <!-- endinject -->
-            <!-- Custom js for this page -->
-            <script src="assets/js/dashboard.js"></script>
-            <script src="assets/js/todolist.js"></script>
-            <!-- End custom js for this page -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a
+                    href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights
+                reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                    class="mdi mdi-heart text-danger"></i></span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="country.js"></script>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- End custom js for this page -->
 </body>
 
 </html>
