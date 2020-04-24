@@ -23,6 +23,12 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/cv.jpg" />
 </head>
+<script type="text/javascript">
+    function fncSubmit() {
+
+        alert('Success full');
+    }
+</script>
 
 <body>
     <div class="container-scroller">
@@ -242,30 +248,30 @@
                             <p class="card-description"> We need your help in providing the most accurate and truthful
                                 medical statement in order for us to treat and prevent spreading of the disease
                                 effectively </p>
-                            <form class="forms-sample" name="from_regist" onSubmit="JavaScript:return fncSubmit();">
+                            <form class="forms-sample" onSubmit="JavaScript:return fncSubmit();">
                                 <div class="row form-group">
                                     <div class="col">
-                                        <input type="text" name="fname" id="fname" class="form-control"
-                                            placeholder="First name">
+                                        <input type="text" name="input_name" id="input_name" class="form-control"
+                                            pattern="^[ก-๏\s-a-zA-Z\s]+$" autocomplete="off" value="" required
+                                            placeholder="์Name and Lastname">
                                     </div>
                                     <div class="col">
-                                        <input type="text" name="lname" id="lname" class="form-control"
-                                            placeholder="Last name">
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" name="pnumber" id="pnumber" class="form-control"
+                                        <input type="text" name="input_tel" id="input_tel" class="form-control"
+                                            pattern="^0([8|9|6])([0-9]{8}$)" autocomplete="off" value="" required
                                             placeholder="Phone number">
                                     </div>
                                 </div>
 
                                 <div class="row form-group">
                                     <div class="col">
-                                        <div class="radio mr-3 card-description">
-                                            <label><input type="radio" name="optradio0" id="shareholder" />
+                                        <div class="form-check radio mr-3 card-description">
+                                            <label><input type="radio" name="radio_gender" id="radio_gender_1"
+                                                    value="shareholder" required />
                                                 ผู้ถือหุ้นหรือผู้มอบฉันทะ/shareholder or proxy</label>
                                         </div>
-                                        <div class="radio card-description">
-                                            <label><input type="radio" name="optradio0" id="escort" />
+                                        <div class="form-check radio card-description">
+                                            <label><input type="radio" name="radio_gender" id="radio_gender_2"
+                                                    value="Escort" required />
                                                 ผู้ติดตาม/Escort</label>
                                         </div>
                                     </div>
@@ -286,7 +292,7 @@
                                                 <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />No
+                                                <input type="radio" name="optradio1" checked />No
                                             </div>
                                         </div>
                                         <div class="card-description row">
@@ -294,10 +300,10 @@
                                                 <p>2. มีน้ำมูก (Runny Nose)</p>
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                                <input type="radio" name="optradio2" />Yes&nbsp;&nbsp;
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />No
+                                                <input type="radio" name="optradio2" checked />No
                                             </div>
                                         </div>
                                         <div class="card-description row">
@@ -306,10 +312,10 @@
                                                     breathing)</p>
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                                <input type="radio" name="optradio3" />Yes&nbsp;&nbsp;
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />No
+                                                <input type="radio" name="optradio3" checked />No
                                             </div>
                                         </div>
                                         <div class="card-description row">
@@ -320,10 +326,10 @@
                                                     system ?)</p>
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                                <input type="radio" name="optradio4" />Yes&nbsp;&nbsp;
                                             </div>
                                             <div class="radio">
-                                                <input type="radio" name="optradio1" />No
+                                                <input type="radio" name="optradio4" checked />No
                                             </div>
                                         </div>
                                     </div>
@@ -347,14 +353,6 @@
                                                 <label class="checkbox-inline mr-3"><input type="checkbox"
                                                         value="" />America (อเมริกา)</label>
                                             </div>
-                                            <div>
-                                                <div class="radio">
-                                                    <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
-                                                </div>
-                                                <div class="radio">
-                                                    <input type="radio" name="optradio1" />No
-                                                </div>
-                                            </div>
                                         </div>
 
                                     </div>
@@ -362,27 +360,35 @@
                                 <div class="row form-group">
                                     <div class="col">
                                         <div>
-                                            <p class="card-description">(During last 14 days,have you close contact those who came from the area affected by the 
-                                                outbreaks of COVID-19 or history of close contact with a confirmed case of COVID-19 infection?:)</p>
+                                            <p class="card-description">(During last 14 days,have you close contact
+                                                those who came from the area affected by the
+                                                outbreaks of COVID-19 or history of close contact with a confirmed case
+                                                of COVID-19 infection?:)</p>
                                         </div>
                                         <div class="card-description row">
                                             <div class="col radio">
-                                                <input type="radio" name="optradio1" />Yes&nbsp;&nbsp;
+                                                <input type="radio" name="optradio6" />Yes&nbsp;&nbsp;
                                             </div>
                                             <div class="col radio">
-                                                <input type="radio" name="optradio1" />No
+                                                <input type="radio" name="optradio6" checked />No
                                             </div>
-                                        </div> 
+                                        </div>
                                         <div>
-                                            <p class="card-description">(Note: List of the affected countries is subject to change following the updated notification abd/or guidelines issued by the Miniisty of Public Health
+                                            <p class="card-description">(Note: List of the affected countries is subject
+                                                to change following the updated notification abd/or guidelines issued by
+                                                the Miniisty of Public Health
                                                 and/or other govemment agencies)
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-                                <button class="btn btn-light">Cancel</button>
                             </form>
+                            <div class="row form-group">
+                                <div class="col"><br>
+                                    <a class="btn btn-primary btn-lg" href="index.html" role="button">Cancel</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
